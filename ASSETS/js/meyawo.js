@@ -35,8 +35,8 @@ window.addEventListener("scroll", () => {
 
 //extra js
 
-window.onload = function() {
-    // Page load hote hi form reset ho jaye
-    const form = document.querySelector("form");
-    if (form) form.reset();
-};
+// window.onload = function() {
+//     // Page load hote hi form reset ho jaye
+//     const form = document.querySelector("form");
+//     if (form) form.reset();
+// };

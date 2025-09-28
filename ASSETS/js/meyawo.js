@@ -32,3 +32,24 @@ window.addEventListener("scroll", () => {
     navbarLogo.textContent = "PORTFOLIO";
   }
 });
+
+//extra js
+
+const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            alert("Your message has been sent successfully!");
+            form.reset();
+        } else {
+            alert("Oops! Something went wrong. Please try again.");
+        }
+    });

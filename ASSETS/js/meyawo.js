@@ -35,21 +35,8 @@ window.addEventListener("scroll", () => {
 
 //extra js
 
-const form = document.getElementById("contact-form");
-
-    form.addEventListener("submit", async function(event) {
-        event.preventDefault();
-
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: new FormData(form),
-            headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-            alert("Your message has been sent successfully!");
-            form.reset();
-        } else {
-            alert("Oops! Something went wrong. Please try again.");
-        }
-    });
+window.onload = function() {
+    // Page load hote hi form reset ho jaye
+    const form = document.querySelector("form");
+    if (form) form.reset();
+};

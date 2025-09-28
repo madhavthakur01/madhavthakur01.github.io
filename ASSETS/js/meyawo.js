@@ -35,8 +35,10 @@ window.addEventListener("scroll", () => {
 
 //extra js
 
-// window.onload = function() {
-//     // Page load hote hi form reset ho jaye
-//     const form = document.querySelector("form");
-//     if (form) form.reset();
-// };
+window.addEventListener("pageshow", function(event) {
+    const form = document.getElementById("contactForm"); // apne form ka id
+    if (form) {
+        form.reset(); // form clear ho jaye
+    }
+});
+
